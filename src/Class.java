@@ -3,6 +3,11 @@ import java.util.ArrayList;
 class Class {
     private String classType;
     private int timesTaken = 1;
+
+    /**
+     * creates a new class object. This helps reduce the needed arrays/arraylists.
+     * @param className
+     */
      Class(String className){
         classType = className;
     }

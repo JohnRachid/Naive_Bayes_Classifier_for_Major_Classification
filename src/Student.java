@@ -1,15 +1,25 @@
 import java.util.ArrayList;
 
+/**
+ * @author John Rachid
+ */
 class Student {
     private String studentID;
     private String predictedMajorOne, predictedMajorTwo, predictedMajorThree;
     private String actualMajor;
+    private ArrayList<String> grades;
+    private ArrayList<String> letterGrade;
     ArrayList<Class> classesTaken;
 
-
+    /**
+     * creates a new student. each student has a arraylist of classesTaken,grades and letterGrades.
+     * @param id the students id
+     */
     Student(String id) {
         studentID = id;
         classesTaken = new ArrayList<>();
+        grades = new ArrayList<>();
+        letterGrade = new ArrayList<>();
     }
 
     String getStudentID() {
@@ -56,4 +66,19 @@ class Student {
         this.predictedMajorThree = predictedMajorThree;
     }
 
+    public ArrayList<String> getGrades() {
+        return grades;
+    }
+
+    public void addToGrades(String gradeToAdd) {
+        grades.add(gradeToAdd);
+    }
+
+    public ArrayList<String> getLetterGrade() {
+        return letterGrade;
+    }
+
+    public void addToLetterGrade(String letterGrade2) {
+        letterGrade.add(letterGrade2);
+    }
 }
